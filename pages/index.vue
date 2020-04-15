@@ -1,8 +1,14 @@
 <template lang="pug">
   Default(:showNavbar="true")
     .top
-      h1 {{ title }}
-      .subtitle {{ subtitle }}
+      .right 
+        .title 
+          h1 {{ title }}
+          .subtitle {{ subtitle }}
+
+        .action
+          nuxt-link(:to="action.main.url").main {{ action.main.text }}
+          nuxt-link(:to="action.secondary.url").secondary {{ action.secondary.text }}
 
 </template>
 
@@ -23,6 +29,7 @@ export default {
     return {
       title: attributes.title,
       subtitle: attributes.subtitle,
+      action: attributes.action,
     }
   }
 }
@@ -30,12 +37,47 @@ export default {
 
 <style lang="scss" scoped>
 .top {
-  h1 {
-    font-size: 3em
-  }
-  .subtitle {
-    font-size: 1.5em;
-    font-weight: 400;
+
+  margin-top: calc(var(--extra-padding) * 5);
+
+  .right {
+    .title {
+      h1 { font-size: 3em; margin-bottom: 0; }
+      .subtitle {
+        font-size: 1.5em;
+        font-weight: 400;
+      }
+
+      margin-bottom: calc(var(--extra-padding) * 3);
+    }
+
+    .action {
+      & a {
+        padding: var(--main-padding) calc(var(--main-padding) * 3) ;
+        border-radius: var(--border-radius);
+        text-decoration: unset;
+
+        @include mobile-screen {
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+
+        &.main {
+          color: white;
+          background-color: var(--action-color);
+        }
+        &.secondary {
+          @include not-mobile-screen { margin-left: var(--main-padding); }
+          @include mobile-screen { margin-top: var(--main-padding); }
+          box-shadow: inset 0 0 0 3px var(--action-color);
+          // , inset 0 0 0 10px white;
+
+          color: var(--action-color);
+        }
+      }
+
+    }
   }
 }
 </style>

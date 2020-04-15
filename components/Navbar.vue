@@ -6,7 +6,7 @@
       nuxt-link(to="") Guide
       nuxt-link(to="") Blog
       nuxt-link(to="").highlight.features Features
-      nuxt-link(to="").highlight.install Install
+      nuxt-link(to="").highlight.install Download
 </template>
 
 <script>
@@ -52,16 +52,14 @@ nav {
       line-height: 1.8;
 
       &.highlight {
-        background-color: rgb(200, 200, 200);
-        &.install {
-          background-color: rgb(56, 56, 243);
-          color: white;
-        }
+        // background-color: rgb(200, 200, 200);
+        background-color: rgba(0, 0, 0, .05);
 
         &.features {
           border-radius: 9px 0 0 9px
         }
         &.install {
+          background-color: rgba(0, 0, 0, .15);
           border-radius: 0 9px 9px 0;
         }
       }
