@@ -1,9 +1,12 @@
 <template lang="pug">
   nav
     .logo
+      img(src='~/assets/svg/logo.svg')
     .right
-      nuxt-link(to="") Features
-      nuxt-link(to="").install Install
+      nuxt-link(to="") Guide
+      nuxt-link(to="") Blog
+      nuxt-link(to="").highlight.features Features
+      nuxt-link(to="").highlight.install Install
 </template>
 
 <script>
@@ -18,16 +21,50 @@ nav {
   display: flex;
 
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
 
-  padding: var(--dense-padding) var(--side-padding);
+  padding: calc(var(--dense-padding) * 1.5) var(--main-padding);
 
   position: sticky;
   top: 0;
 
+  .logo {
+    img {
+      height: calc(var(--font-size) * 2);
+    }
+  }
+
+  font-size: 0.8em;
+
   .right {
+    display: flex;
+    align-content: center;
+
     & > a {
-      padding-left: var(--main-padding);
+      // margin-left: var(--main-padding);
+
+      display: block;
+
+      color: unset;
+      text-decoration: unset;
+
+      padding: var(--dense-padding) calc(var(--dense-padding) * 3.5);
+      line-height: 1.8;
+
+      &.highlight {
+        background-color: rgb(200, 200, 200);
+        &.install {
+          background-color: rgb(56, 56, 243);
+          color: white;
+        }
+
+        &.features {
+          border-radius: 9px 0 0 9px
+        }
+        &.install {
+          border-radius: 0 9px 9px 0;
+        }
+      }
     }
   }
 }
