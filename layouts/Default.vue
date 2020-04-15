@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 main {
-  padding: var(--main-padding);
-  padding-top: none;
+  padding: var(--main-padding) var(--side-padding);
+  padding-top: 0;
 }
 </style>
