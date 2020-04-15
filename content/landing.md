@@ -14,4 +14,8 @@ mainImage: main.png
 
 features:
   title: Features
+  list:
+    - text: Add stops to your favorites
+      description: ... for faster viewing
+      image: favorites.png
 ---

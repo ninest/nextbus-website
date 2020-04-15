@@ -130,5 +130,9 @@ article {
       }
     }
   }
+
+  .features {
+    h2 { font-size: 2em}
+  }
 }
 </style>
