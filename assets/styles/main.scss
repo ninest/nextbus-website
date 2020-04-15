@@ -1,0 +1,12 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-size: var(--font-size);
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; 
+}
+* { box-sizing: border-box; }
+body { 
+  background-color: #fffffe;
+  color: var(--font-color);
+}

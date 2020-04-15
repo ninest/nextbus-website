@@ -1,0 +1,25 @@
+@mixin mobile-screen {
+  @media screen and (max-width: 750px) {
+    @content;
+  }
+}
+@mixin tablet-screen {
+  @media screen and (max-width: 1150px) {
+    @content;
+  }
+}
+@mixin not-mobile-screen {
+  @media screen and (min-width: 750px) {
+    @content;
+  }
+}
+
+// variables
+:root {
+  --font-size: 19px;
+
+  --main-padding: 1em;
+  --medium-padding: 0.5em;
+  --dense-padding: 0.3em;
+  --extra-padding: 1.3em;
+}

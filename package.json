@@ -1,0 +1,29 @@
+{
+  "name": "nextbus-website",
+  "version": "1.0.0",
+  "description": "NextBus SG promotion website",
+  "author": "themindstorm",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@vue/component-compiler-utils": "^3.1.1",
+    "frontmatter-markdown-loader": "^3.2.1",
+    "markdown-it": "^10.0.0",
+    "markdown-it-anchor": "^5.2.5",
+    "nuxt": "^2.0.0",
+    "vue-template-compiler": "^2.6.11",
+    "yaml-loader": "^0.6.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
+    "node-sass": "^4.13.1",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^8.0.2"
+  }
+}
