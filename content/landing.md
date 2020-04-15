@@ -9,4 +9,9 @@ action:
   secondary:
     text: Features
     url: /
+
+mainImage: main.png
+
+features:
+  title: Features
 ---
