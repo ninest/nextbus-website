@@ -65,6 +65,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 article {
 
   .top {
@@ -109,6 +110,13 @@ article {
       }
 
       .action {
+        
+        @include mobile-screen {
+          display: grid;
+          grid-auto-columns: 1fr 1fr;
+          grid-gap: var(--dense-padding);
+        }
+
         & a {
           padding: var(--main-padding) calc(var(--main-padding) * 3) ;
           border-radius: var(--border-radius);
@@ -116,7 +124,6 @@ article {
 
           @include mobile-screen {
             display: block;
-            width: 100%;
             text-align: center;
           }
 
@@ -162,6 +169,10 @@ article {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: var(--main-padding);
+
+      @include mobile-screen {
+        grid-template-columns: 1fr; 
+      }
 
       .each-feature {
         

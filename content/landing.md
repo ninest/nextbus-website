@@ -18,11 +18,11 @@ features:
     - text: Add stops to your favorites
       description: ... for faster viewing
       image: favorites.png
-    - text: Search for bus stops, services, and MRT stations
+    - text: Search if you're lost
       description: 
       image: search.png
     - text: Dark theme
-      description: Don't get blind
+      description: Use at night, comfortably
       image: dark.png
       dark: true
 
