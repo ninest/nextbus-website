@@ -17,15 +17,16 @@
       .features
         h2 {{ features.title }}
 
-      div(
-        v-for="f in features.list" :key="f.text"
-        v-bind:class="{dark: f.dark}"
-      ).each-feature 
-        .graphic
-          img(:src="require(`~/assets/images/${f.image}`)")
-        .text
-          h3 {{ f.text }}
-          .description {{ f.description }}
+        .grid
+          div(
+            v-for="f in features.list" :key="f.text"
+            v-bind:class="{dark: f.dark}"
+          ).each-feature 
+            .graphic
+              img(:src="require(`~/assets/images/${f.image}`)")
+            .text
+              h3 {{ f.text }}
+              .description {{ f.description }}
         
 </template>
 
@@ -57,12 +58,13 @@ export default {
 <style lang="scss" scoped>
 article {
 
-  & > div {
-    padding: var(--main-padding) var(--side-padding) 0 var(--side-padding);
-  }
-
   .top {
     margin-top: calc(var(--extra-padding) * 5);
+
+    @include mobile-screen {
+      maring-top: var(--dense-padding);
+    }
+
     @include mobile-screen { margin-top: var(--main-padding); }
 
     display: grid;
@@ -130,51 +132,61 @@ article {
     .left {
       grid-area: left;
       img {
-        height: 500px;
-        // border: 6px solid rgb(70, 70, 70);
-        border-radius: calc(var(--border-radius) * 2);
+
+        @include not-mobile-screen {
+          height: 650px;
+          margin-top: -80px;
+        }
 
         @include mobile-screen {
-          height: 50vh;
+          // height: 50vh;
+          width: 100%;
         }
+
+        border-radius: calc(var(--border-radius) * 2);
       }
     }
   }
 
   .features {
     h2 { font-size: 2.3em; margin-bottom: 0; }
+
+    .grid {
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: var(--main-padding);
+
+      .each-feature {
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: var(--main-padding);
+
+        border-radius: var(--border-radius);
+
+        background-color: rgba(0, 0, 0, 0.05);
+
+        padding: var(--main-padding);
+
+        &.dark { color: white; background-color: black; 
+                .description { color: #aaa; }
+        }
+
+        .text {
+          h3 { font-size: 1.8em }
+          .description { font-size: 1.3em }
+        }
+
+        .graphic {
+          img {
+            width: 100%;
+            border-radius: calc(var(--border-radius) /2);
+          }
+        }
+      }
+    }
   }
 
-  .each-feature {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: var(--main-padding);
-    align-items: center;
-
-    margin: var(--extra-padding) var(--side-padding) var(--extra-padding) var(--side-padding);
-    padding: var(--main-padding);
-    border-radius: var(--border-radius);
-    background-color: rgba(0,0,0, 0.05);
-
-    @include mobile-screen {
-      grid-template-columns: 1fr;
-      margin: var(--extra-padding);
-    }
-
-    &.dark { color: white; background-color: black; 
-            .description { color: #aaa; }
-    }
-
-    .text {
-      h3 { font-size: 1.8em }
-      .description { font-size: 1.3em }
-
-    }
-    .graphic {
-      img { height: 60vh; border-radius: var(--border-radius); }
-
-      @include mobile-screen { img { width: 100%; } }
-    }
-  }
 }
 </style>
