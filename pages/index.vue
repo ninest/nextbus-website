@@ -27,7 +27,15 @@
             .text
               h3 {{ f.text }}
               .description {{ f.description }}
-        
+      
+      .download
+        h2 {{ download.title }}
+
+        .store-buttons
+
+          a(:href="download.androidLink") Play Store
+          a(href="") App Store
+
 </template>
 
 <script>
@@ -50,6 +58,7 @@ export default {
       action: attributes.action,
       mainImage: attributes.mainImage,
       features: attributes.features,
+      download: attributes.download,
     }
   }
 }
@@ -86,7 +95,6 @@ article {
     .right {
       grid-area: right;
       .title {
-        h1 { font-size: 3em; margin-top: 0; margin-bottom: 0; }
         .subtitle {
           font-size: 1.5em;
           font-weight: 400;
@@ -149,8 +157,6 @@ article {
   }
 
   .features {
-    h2 { font-size: 2.3em; margin-bottom: 0; }
-
     .grid {
 
       display: grid;
@@ -174,8 +180,8 @@ article {
         }
 
         .text {
-          h3 { font-size: 1.8em }
-          .description { font-size: 1.3em }
+          h3 { font-size: 1.4em; margin-top: 0; }
+          .description { font-size: 1.2em }
         }
 
         .graphic {
@@ -188,5 +194,31 @@ article {
     }
   }
 
+  .download {
+    .store-buttons {
+      display: flex;
+
+      a {
+        display: block;
+        padding: var(--main-padding) calc(var(--main-padding) *3) ;
+        border-radius: var(--border-radius);
+        background-color: black;
+        color: white;
+        font-weight: bold;
+
+        margin-right: var(--main-padding);
+
+        @include mobile-screen {
+          padding: var(--main-padding);
+          width: 50%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
 }
+
+h1 { font-size: 3em; margin-top: 0; margin-bottom: 0; }
+h2 { font-size: 2.3em; margin-top: 2em;}
 </style>

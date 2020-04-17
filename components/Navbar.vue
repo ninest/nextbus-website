@@ -6,7 +6,7 @@
       nuxt-link(to="") Guide
       nuxt-link(to="") Blog
       nuxt-link(to="").highlight.features Features
-      nuxt-link(to="").highlight.install Download
+      a(href="https://play.google.com/store/apps/details?id=com.themindstorm.nextbussg").highlight.install Download
 </template>
 
 <script>

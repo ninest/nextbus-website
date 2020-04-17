@@ -25,4 +25,8 @@ features:
       description: Don't get blind
       image: dark.png
       dark: true
+
+download:
+  title: Download now
+  androidLink: https://play.google.com/store/apps/details?id=com.themindstorm.nextbussg
 ---
