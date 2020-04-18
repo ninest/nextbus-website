@@ -1,51 +1,41 @@
 <template lang="pug">
   Default(:showNavbar="true")
     article
-      .top
-        .right 
-          .title 
-            h1 {{ title }}
-            .subtitle {{ subtitle }}
 
-          .action
-            nuxt-link(:to="action.main.url").main {{ action.main.text }}
-            nuxt-link(:to="action.secondary.url").secondary {{ action.secondary.text }}
-        
-        .left
-          img(:src="require(`~/assets/images/${mainImage}`)")
+      Top(:title='title' :subtitle='subtitle' :action='action' :mainImage='mainImage')
 
-      .features
-        h2 {{ features.title }}
-
-        .grid
-          div(
-            v-for="f in features.list" :key="f.text"
-            v-bind:class="{dark: f.dark}"
-          ).each-feature 
-            .graphic
-              img(:src="require(`~/assets/images/${f.image}`)")
-            .text
-              h3 {{ f.text }}
-              .description {{ f.description }}
+      Features(:features='features')
       
-      .download
-        h2 {{ download.title }}
-
-        .store-buttons
-
-          a(:href="download.androidLink") Play Store
-          a(href="") App Store
+      Download(:download="download")
 
 </template>
 
 <script>
 
 import Default from '~/layouts/Default.vue';
-
+import Top from '@/components/landing/Top.vue';
+import Features from '@/components/landing/Features.vue';
+import Download from '@/components/landing/Download.vue';
 
 export default {
+  head() {
+    return {
+      title: `${this.siteConfig.title} | ${this.siteConfig.desc}`,
+      titleTemplate: '%s',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.siteConfig} – The all new open-source app for Singapore. See bus timings fast with little interaction in an interface you will love`
+        }
+      ]
+    }
+  },
   components: {
-    Default,
+    Default, 
+    Top, 
+    Download,
+    Features
   },
   async asyncData({params, app}){
     var md = require('markdown-it')();
@@ -66,169 +56,6 @@ export default {
 
 <style lang="scss" scoped>
 
-article {
-
-  .top {
-    margin-top: calc(var(--extra-padding) * 5);
-
-    @include mobile-screen {
-      maring-top: var(--dense-padding);
-    }
-
-    @include mobile-screen { margin-top: var(--main-padding); }
-
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas: "right left";
-
-    @include mobile-screen {
-      grid-template-columns: 1fr;
-      grid-template-areas: 
-        "left"
-        "right";
-    }
-
-    height: 75vh;
-    @include mobile-screen {
-      height: 89vh;
-    }
-
-    .right {
-      grid-area: right;
-      .title {
-        .subtitle {
-          font-size: 1.5em;
-          font-weight: 400;
-        }
-        @include mobile-screen {
-          h1 { font-size: 2.5em }
-          .subtitle { font-size: 1.3em }
-        }
-
-        margin-bottom: calc(var(--extra-padding) * 3);
-        @include mobile-screen { margin-bottom: var(--main-padding); }
-      }
-
-      .action {
-        
-        @include mobile-screen {
-          display: grid;
-          grid-auto-columns: 1fr 1fr;
-          grid-gap: var(--dense-padding);
-        }
-
-        & a {
-          padding: var(--main-padding) calc(var(--main-padding) * 3) ;
-          border-radius: var(--border-radius);
-          text-decoration: unset;
-
-          @include mobile-screen {
-            display: block;
-            text-align: center;
-          }
-
-          &.main {
-            color: white;
-            background-color: var(--action-color);
-          }
-          &.secondary {
-            @include not-mobile-screen { margin-left: var(--main-padding); }
-            @include mobile-screen { margin-top: var(--main-padding); }
-            box-shadow: inset 0 0 0 3px var(--action-color);
-            // , inset 0 0 0 10px white;
-
-            color: var(--action-color);
-          }
-        }
-
-      }
-    }
-
-    .left {
-      grid-area: left;
-      img {
-
-        @include not-mobile-screen {
-          height: 650px;
-          margin-top: -80px;
-        }
-
-        @include mobile-screen {
-          // height: 50vh;
-          width: 100%;
-        }
-
-        border-radius: calc(var(--border-radius) * 2);
-      }
-    }
-  }
-
-  .features {
-    .grid {
-
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: var(--main-padding);
-
-      @include mobile-screen {
-        grid-template-columns: 1fr; 
-      }
-
-      .each-feature {
-        
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: var(--main-padding);
-
-        border-radius: var(--border-radius);
-
-        background-color: rgba(0, 0, 0, 0.05);
-
-        padding: var(--main-padding);
-
-        &.dark { color: white; background-color: black; 
-                .description { color: #aaa; }
-        }
-
-        .text {
-          h3 { font-size: 1.4em; margin-top: 0; }
-          .description { font-size: 1.2em }
-        }
-
-        .graphic {
-          img {
-            width: 100%;
-            border-radius: calc(var(--border-radius) /2);
-          }
-        }
-      }
-    }
-  }
-
-  .download {
-    .store-buttons {
-      display: flex;
-
-      a {
-        display: block;
-        padding: var(--main-padding) calc(var(--main-padding) *3) ;
-        border-radius: var(--border-radius);
-        background-color: black;
-        color: white;
-        font-weight: bold;
-
-        margin-right: var(--main-padding);
-
-        @include mobile-screen {
-          padding: var(--main-padding);
-          width: 50%;
-          text-align: center;
-        }
-      }
-    }
-  }
-
-}
 
 h1 { font-size: 3em; margin-top: 0; margin-bottom: 0; }
 h2 { font-size: 2.3em; margin-top: 2em;}

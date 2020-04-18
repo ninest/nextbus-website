@@ -15,16 +15,23 @@ mainImage: main.png
 features:
   title: Features
   list:
-    - text: Add stops to your favorites
-      description: ... for faster viewing
+    - text: View timings fast
+      description: Little interaction required
       image: favorites.png
-    - text: Search if you're lost
-      description: 
+    - text: Offline access
+      description: See information on all services and stops
       image: search.png
     - text: Dark theme
       description: Use at night, comfortably
       image: dark.png
       dark: true
+    - text: More options
+      description: View an MRT map, rename bus stops, and more!
+      image: more.png
+      dark: true
+    - text: Open-source
+      description: View the code and make contributions!
+      image: open.png
 
 download:
   title: Download now

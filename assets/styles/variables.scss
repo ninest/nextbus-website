@@ -1,5 +1,5 @@
 @mixin mobile-screen {
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 850px) {
     @content;
   }
 }
@@ -9,14 +9,14 @@
   }
 }
 @mixin not-mobile-screen {
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 850px) {
     @content;
   }
 }
 
 // variables
 :root {
-  --fallback-font: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --fallback-font: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-size: 19px;
 
   @include mobile-screen {

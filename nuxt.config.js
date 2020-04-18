@@ -1,80 +1,86 @@
-const path = require('path')
+const path = require("path");
 
 // markdown configration
-import Mode from 'frontmatter-markdown-loader/mode'
-import MarkdownIt from 'markdown-it'
+import Mode from "frontmatter-markdown-loader/mode";
+import MarkdownIt from "markdown-it";
 
 const md = new MarkdownIt({
   html: true,
   typographer: true
-})
+});
+
+// site config stuff
+import fs from "fs";
+import YAML from "yaml";
+var file = fs.readFileSync("./siteConfig.yml", "utf8");
+var siteConfig = YAML.parse(file);
 
 export default {
-  server: {     
-    port: 8000, // default: 3000     
-    host: '0.0.0.0', // default: localhost   
-  }, 
-  mode: 'universal',
+  server: {
+    port: 8000, // default: 3000
+    host: "0.0.0.0" // default: localhost
+  },
+  mode: "universal",
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
-    title: process.env.npm_package_name || '',
+    titleTemplace: "%s - " + siteConfig.title,
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
-      { name: 'theme-color', hid: 'theme-color', content: '#3f51bf'},
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: siteConfig.desc
+      },
+      { name: "theme-color", hid: "theme-color", content: "#3f51bf" }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap' }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      }
     ]
   },
   /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#000' },
+   ** Customize the progress-bar color
+   */
+  loading: { color: "#000" },
   /*
-  ** Global CSS
-  */
-  css: [
-  ],
+   ** Global CSS
+   */
+  css: [],
   /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-    '~/plugins/globalComponents.js',
-    '~/plugins/siteConfig.js',
-  ],
+   ** Plugins to load before mounting the App
+   */
+  plugins: ["~/plugins/globalComponents.js", "~/plugins/siteConfig.js"],
   /*
-  ** Nuxt.js dev-modules
-  */
-  buildModules: [
-  ],
+   ** Nuxt.js dev-modules
+   */
+  buildModules: [],
   /*
-  ** Nuxt.js modules
-  */
-  modules: ['@nuxtjs/style-resources',],
+   ** Nuxt.js modules
+   */
+  modules: ["@nuxtjs/style-resources"],
   styleResources: {
-    scss: [
-      'assets/styles/variables.scss',
-    ]
+    scss: ["assets/styles/variables.scss"]
   },
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** You can extend webpack config here
-    */
+     ** You can extend webpack config here
+     */
     extend(config, ctx) {
-
       // for reading markdown files
       config.module.rules.push(
         {
           test: /\.md$/,
-          loader: 'frontmatter-markdown-loader',
+          loader: "frontmatter-markdown-loader",
           // include: path.resolve(__dirname, 'content'),
           options: {
             mode: [Mode.VUE_RENDER_FUNCTIONS, Mode.VUE_COMPONENT, Mode.BODY],
@@ -82,22 +88,22 @@ export default {
               // root: "dynamicMarkdown"
             },
             markdown(body) {
-              return md.render(body)
+              return md.render(body);
             }
           }
         },
 
         {
           test: /\.ya?ml$/,
-          type: 'json',
-          use: 'yaml-loader'
+          type: "json",
+          use: "yaml-loader"
         }
-      )
+      );
     }
   },
 
   generate: {
-    dir: 'dist',
-    routes: ['/']
+    dir: "dist",
+    routes: ["/"]
   }
-}
+};
