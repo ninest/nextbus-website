@@ -1,6 +1,6 @@
 <template lang="pug">
   .download
-    h2 {{ download.title }}
+    h2(id="download") {{ download.title }}
 
     .store-buttons
 

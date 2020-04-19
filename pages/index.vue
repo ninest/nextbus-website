@@ -56,7 +56,6 @@ export default {
 
 <style lang="scss" scoped>
 
-
 h1 { font-size: 3em; margin-top: 0; margin-bottom: 0; }
 h2 { font-size: 2.3em; margin-top: 2em;}
 </style>

@@ -32,7 +32,7 @@ export default {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-areas: "right left";
-  grid-gap: var(--main-padding);
+  grid-gap: var(--extra-padding);
 
   @include mobile-screen {
     grid-template-columns: 1fr;

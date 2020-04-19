@@ -5,10 +5,10 @@ subtitle: Public transport at your fingertips
 action:
   main:
     text: Download
-    url: /
+    url: /#download
   secondary:
     text: Features
-    url: /
+    url: /#features
 
 mainImage: main.png
 
