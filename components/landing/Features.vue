@@ -12,6 +12,7 @@
         .text
           h3 {{ f.text }}
           .description {{ f.description }}
+          a(v-if='f.button' :href="f.button.url") {{ f.button.text }}
 </template>
 
 <script>
@@ -52,6 +53,18 @@ export default {
       .text {
         h3 { font-size: 1.4em; margin-top: 0; }
         .description { font-size: 0.9em }
+
+        a {
+          display: inline-block;
+          color: unset;
+          text-decoration: unset;
+
+          margin-top: var(--main-padding);
+
+          border: 2px solid black;
+          padding: var(--dense-padding) calc(var(--dense-padding) * 3.5);
+          border-radius: var(--border-radius);
+        }
       }
 
       img {

@@ -32,6 +32,9 @@ features:
     - text: Open-source
       description: View the code and make contributions!
       image: open.png
+      button:
+        text: GitHub
+        url: https://github.com/themindstorm/NextBusSG
 
 download:
   title: Download now

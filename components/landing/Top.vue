@@ -68,10 +68,16 @@ export default {
       display: flex;
 
       & a {
+        display: block;
         padding: var(--main-padding) calc(var(--main-padding) * 3) ;
+        @include mobile-screen {
+          padding: var(--main-padding);
+          width: 50%;
+          text-align: center;
+        }
+
         border-radius: var(--border-radius);
         text-decoration: unset;
-        display: block;
 
         &.main {
           color: white;
