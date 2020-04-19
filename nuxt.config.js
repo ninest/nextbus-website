@@ -34,7 +34,7 @@ export default {
         name: "description",
         content: siteConfig.desc
       },
-      { name: "theme-color", hid: "theme-color", content: "#3f51bf" }
+      { name: "theme-color", hid: "theme-color", content: "#000000" }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
