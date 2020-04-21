@@ -3,15 +3,17 @@
     Navbar(v-if="showNavbar")
     main
       slot
+    Footer
 </template>
 
 <script>
 import Root from '~/layouts/Root.vue';
 import Navbar from '~/components/Navbar.vue';
+import Footer from '~/components/Footer.vue';
 
 export default {
   components: {
-    Root, Navbar,
+    Root, Navbar, Footer
   },
   props: {
     showNavbar: {

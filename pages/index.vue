@@ -20,8 +20,8 @@ import Download from '@/components/landing/Download.vue';
 export default {
   head() {
     return {
-      title: `${this.siteConfig.title} | ${this.siteConfig.desc}`,
       titleTemplate: '%s',
+      title: `${this.siteConfig.title} | ${this.siteConfig.desc}`,
       meta: [
         {
           hid: 'description',

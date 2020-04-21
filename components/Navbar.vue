@@ -1,7 +1,8 @@
 <template lang="pug">
   nav
     .logo
-      img(src='~/assets/svg/logo.svg')
+      nuxt-link(to="/")
+        img(src='~/assets/svg/logo.svg')
     .right
       //- nuxt-link(to="") Guide
       //- nuxt-link(to="") Blog

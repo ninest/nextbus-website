@@ -25,7 +25,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplace: "%s - " + siteConfig.title,
+    titleTemplate: "%s - " + siteConfig.title,
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
