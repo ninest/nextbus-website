@@ -81,11 +81,11 @@ export default {
 
         &.main {
           color: white;
-          background-color: var(--action-color);
+          background-color: var(--accent-color);
         }
         &.secondary {
           margin-left: var(--main-padding);
-          box-shadow: inset 0 0 0 3px var(--action-color);
+          box-shadow: inset 0 0 0 3px var(--accent-color);
           // , inset 0 0 0 10px white;
 
           color: var(--action-color);
