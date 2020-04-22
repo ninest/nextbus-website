@@ -42,7 +42,6 @@ main {
     // background-color: red;
     
     @include desktop-screen { 
-      background-color: red;
       margin: 0 -10%; 
     }
   }
