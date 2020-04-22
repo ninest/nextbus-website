@@ -3,7 +3,10 @@
     h1 Guides
 
     .guides
-      nuxt-link(:to="'/guides/' + eachGuide.slug").each-guide(v-for="eachGuide in guides" v-bind:key="eachGuide.key")
+      nuxt-link(
+        v-for="eachGuide in guides" v-bind:key="eachGuide.key"
+        :to="'/guides/' + eachGuide.slug" 
+      ).each-guide
         h2 {{ eachGuide.attr.title }}
         .excerpt {{ eachGuide.attr.excerpt }}
 </template>
