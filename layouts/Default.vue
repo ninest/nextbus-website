@@ -3,7 +3,7 @@
     Navbar(v-if="showNavbar")
 
     .wrapper
-      main
+      main(:class="{ 'extended-width': extendedWidth }")
         slot
 
       Footer
@@ -22,6 +22,10 @@ export default {
     showNavbar: {
       default: true,
       required: false,
+    },
+    extendedWidth: {
+      default: false,
+      required: false,
     }
   }
 }
@@ -33,6 +37,15 @@ main {
   padding: var(--main-padding) var(--side-padding);
   padding-top: 0;
 
+
+  &.extended-width {
+    // background-color: red;
+    
+    @include desktop-screen { 
+      background-color: red;
+      margin: 0 -10%; 
+    }
+  }
 }
 
 

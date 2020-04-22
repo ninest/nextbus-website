@@ -1,5 +1,5 @@
 <template lang="pug">
-  Default(:showNavbar="true")
+  Default(:showNavbar="true" :extendedWidth="true")
     article
 
       Top(:title='title' :subtitle='subtitle' :action='action' :mainImage='mainImage')
@@ -61,7 +61,13 @@ h2 { font-size: 2.3em; margin-top: 2em;}
 
 article {
   // negative margin to to take more of the entire page
-  margin: 0 -20%;
+  // margin: 0;
+  // @include tablet-screen {
+  //   margin: 0;
+  // }
+  // @include not-mobile-screen {
+  //   margin: 0 -20%;
+  // }
 }
 
 </style>

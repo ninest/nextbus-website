@@ -106,7 +106,15 @@ export default {
 
       @include mobile-screen {
         // height: 50vh;
-        width: 100%;
+        max-width: 100%;
+        max-height: 60vh;
+
+        width: auto;
+        height: auto;
+
+        // center
+        display: block;
+        margin: 0 auto;
       }
 
       border-radius: calc(var(--border-radius) * 2);
