@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-article {
-  padding: 0 15%;
-}
+// article {
+//   padding: 0 15%;
+// }
 </style>

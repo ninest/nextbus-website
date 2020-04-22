@@ -27,12 +27,15 @@ footer {
   border-top: 1px solid rgb(230, 230, 230);
 
   .links {
+    
+    display: flex;
+
     .each-link {
       a { color: gray; }
     }
 
     .each-link + .each-link {
-      margin-top: var(--main-padding);
+      margin-left: var(--main-padding);
     }
   }
 }
