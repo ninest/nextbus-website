@@ -4,7 +4,7 @@ description: Learn how to use the basic functionalities of the app NextBusSG
 excerpt: Learn how to use the basic functionalities of the app NextBusSG
 ---
 
-This article aims to teach you how to use the app NextBusSG. If you haven't downloaded the app, click <nuxt-link to="/#download">here</nuxt-link> to do so.
+This article aims to teach you the basics of NextBusSG (viewing bus arrival timings and adding bus services to your favorites). If you haven't downloaded the app, click <nuxt-link to="/#download">here</nuxt-link> to do so.
 
 ## 1. Viewing bus timings
 
