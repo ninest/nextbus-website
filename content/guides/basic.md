@@ -29,3 +29,24 @@ That's all you need! You may also see the level of crowded of the bus depending 
 - <Clr color="red">Red</Clr> means overcrowded
 
 So all three bus 24s have a regular load.
+
+## 2. Add favorites
+
+You can add a particular bus service at a bus stop to your favorites. Let's say you take **bus 14** at **Bedok Int** often, and you want to add it to your favorites:
+
+First, tap on the on the number **14**, and you should see a confirmation prompt:
+
+<ImgComp src="basic/favorites-prompt.png" />
+
+Click on the <Clr color="accent">**Yes**</Clr> button to add it. It is possible to add multiple favorites from each bus stop. If, for example, you've added buses 9 and 14 from Bedok Int, you will see this in your favorites:
+
+<ImgComp src="basic/favorites.png" />
+
+Add buses you take often to your favorites.
+
+
+### Context-aware favorites
+
+When you open the app the next time, if you have any favorites that are **near** you, they will be shown at the top of the screen. This decision is made by the app. 
+
+If none of your favorites are near by, the app will show you a list of all near by bus stops.

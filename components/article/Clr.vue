@@ -18,4 +18,6 @@ export default {
 .green { color: green }
 .orange { color: orange }
 .red { color: red }
+
+.accent { color: var(--accent-color)}
 </style>
