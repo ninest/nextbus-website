@@ -1,3 +1,6 @@
 title: NextBus SG
 shortTitle: NextBus
 desc: Public transport at your fingertips
+
+guides:
+  - basic

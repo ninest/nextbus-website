@@ -1,9 +1,12 @@
 <template lang="pug">
   Root
     Navbar(v-if="showNavbar")
-    main
-      slot
-    Footer
+
+    .wrapper
+      main
+        slot
+
+      Footer
 </template>
 
 <script>
@@ -25,8 +28,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 main {
   padding: var(--main-padding) var(--side-padding);
   padding-top: 0;
+
 }
+
+
 </style>

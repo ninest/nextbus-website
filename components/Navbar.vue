@@ -4,8 +4,8 @@
       nuxt-link(to="/")
         img(src='~/assets/svg/logo.svg')
     .right
-      //- nuxt-link(to="") Guide
       //- nuxt-link(to="") Blog
+      nuxt-link(to="/guides") Guides
       nuxt-link(to="/#features").highlight.features Features
       a(href="https://play.google.com/store/apps/details?id=com.themindstorm.nextbussg").highlight.install Download
 </template>

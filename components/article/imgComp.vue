@@ -26,7 +26,9 @@ div {
 
   img {
     display: block;
-    margin: 0 auto;
+
+    // sligt margin above and below images
+    margin: 2em auto;
     max-width: 70%;
 
     &.fullwidth {
