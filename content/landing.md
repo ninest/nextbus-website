@@ -37,6 +37,7 @@ features:
         url: https://github.com/themindstorm/NextBusSG
 
 download:
+  title: Download
   android:
     image: badges/google_play.png
     url: https://play.google.com/store/apps/details?id=com.themindstorm.nextbussg
