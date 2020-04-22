@@ -4,7 +4,10 @@
 
     .store-buttons
 
-      a(:href="download.androidLink") Play Store
+      a(:href="download.ios.url" target="_blank")
+        img(:src="require(`~/assets/images/${download.ios.image}`)")
+      a(:href="download.android.url" target="_blank").android
+        img(:src="require(`~/assets/images/${download.android.image}`)")
       //- a(href="") App Store
 </template>
 
@@ -21,18 +24,17 @@ export default {
 
     a {
       display: block;
-      padding: var(--main-padding) calc(var(--main-padding) *3) ;
-      border-radius: var(--border-radius);
-      background-color: black;
-      color: white;
-      font-weight: bold;
 
-      margin-right: var(--main-padding);
+      &.android {
+        margin-left: var(--main-padding);
+      }
+      
+      img {
+        height: 3.5em;
 
-      @include mobile-screen {
-        padding: var(--main-padding);
-        width: 50%;
-        text-align: center;
+        @include mobile-screen {
+          height: 3em;
+        }
       }
     }
   }

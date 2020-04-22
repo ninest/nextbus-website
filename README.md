@@ -2,7 +2,7 @@
 
 > NextBus SG promotion website
 
-![Made with Flutter](https://img.shields.io/badge/Made%20With-Nuxt-008c78?style=flat-square)
+![Made with Nuxt](https://img.shields.io/badge/Made%20With-Nuxt-008c78?style=flat-square)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 ![GitHub](https://img.shields.io/github/license/themindstorm/NextBusSg?style=flat-square)
 
