@@ -6,7 +6,7 @@
       main(:class="{ 'extended-width': extendedWidth }")
         slot
 
-      Footer
+      Footer(:extendedWidth="extendedWidth")
 </template>
 
 <script>
@@ -42,7 +42,8 @@ main {
     // background-color: red;
     
     @include desktop-screen { 
-      margin: 0 -10%; 
+      // margin: 0 -10%; 
+      padding: var(--main-padding) 10%;
     }
   }
 }
