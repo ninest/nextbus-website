@@ -16,6 +16,8 @@ var file = fs.readFileSync("./siteConfig.yml", "utf8");
 var siteConfig = YAML.parse(file);
 
 export default {
+  // for Now.sh hosting
+  buildDir: 'dist',
   server: {
     port: 8000, // default: 3000
     host: "0.0.0.0" // default: localhost
