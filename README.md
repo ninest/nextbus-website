@@ -1,8 +1,8 @@
 # [NextBusSG website](https://nextbus.now.sh/)
 
-> NextBus SG promotion website
+> Promotional website for the NextBus SG iOS and Android app.
 
-[![used by](https://img.shields.io/badge/Used%20In-NextBus%20SG-3f51bf?style=flat-square)](https://github.com/themindstorm/NextBusSG)
+[![used by](https://img.shields.io/badge/Used%20By-NextBus%20SG-3f51bf?style=flat-square)](https://github.com/themindstorm/NextBusSG)
 ![Made with Nuxt](https://img.shields.io/badge/Made%20With-Nuxt-008c78?style=flat-square)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 ![GitHub](https://img.shields.io/github/license/themindstorm/NextBusSg?style=flat-square)
