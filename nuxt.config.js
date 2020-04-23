@@ -15,9 +15,17 @@ import YAML from "yaml";
 var file = fs.readFileSync("./siteConfig.yml", "utf8");
 var siteConfig = YAML.parse(file);
 
+var guides = siteConfig.guides
+var routes = []
+
+
+guides.forEach((slug) => {
+  routes.push(`/guides/${slug}`);
+});
+
 export default {
   // for Now.sh hosting
-  buildDir: 'dist',
+  // buildDir: 'dist',
   server: {
     port: 8000, // default: 3000
     host: "0.0.0.0" // default: localhost
@@ -106,6 +114,6 @@ export default {
 
   generate: {
     dir: "dist",
-    routes: ["/"]
+    routes: routes
   }
 };
