@@ -1,12 +1,10 @@
 <template lang="pug">
   div
-    //- p {{ fullwidth }}
-    img(:src="require(`~/assets/images/guides/${src}`)")
+    img(:src="require(`~/assets/images/guides/${src}`)" :class="{ fullwidth: fullwidth }")
 </template>
 
 <script>
 export default {
-  // props: ['src', 'fullWidth']
   props: {
     src: {
       type: String,

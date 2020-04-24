@@ -10,7 +10,7 @@ This article aims to walk you through the basics of NextBusSG – viewing bus ar
 
 When you open the app, you will see a list of bus stops nearby, based on your current location. Clicking on any of them will reveal a list of bus services:
 
-<ImgComp src="basic/bus-timings-demo.png" />
+<ImgComp src="basic/bus-timings-demo.png" :fullwidth="true" />
 
 In the above screen, the bus stop **Bedok Stn Exit A** has the bus servies **2**, **9**, **24**, **25**, etc. operating. If, for example, you want to see when **bus 24** is arriving, look for **24** in the list of bus services:
 
