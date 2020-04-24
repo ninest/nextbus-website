@@ -16,19 +16,19 @@ In the above screen, the bus stop **Bedok Stn Exit A** has the bus servies **2**
 
 <ImgComp src="basic/service-tile.png" />
 
-The number in black is the bus number (24), and the other three numbers are the bus arrival times. From the image we see the following bus arrival times:
+The number in black is the bus number (9), and the other three numbers are the bus arrival times. From the image we see the following bus arrival times:
 
-- <Clr color="green">Arr</Clr> (the bus has arrived)
+- <Clr color="green">6 m</Clr>inutes
 - <Clr color="orange">21 m</Clr>inutes
 - <Clr color="red">29 m</Clr>inutes
+
+If it says "Arr", the bus has arrived.
 
 That's all you need! You may also see the level of crowded of the bus depending on the color of the timings:
 
 - <Clr color="green">Green</Clr> means no crowd
 - <Clr color="orange">Yellow</Clr> means little crowd
 - <Clr color="red">Red</Clr> means overcrowded
-
-So all three bus 24s have a regular load.
 
 ## 2. Adding favorites
 
