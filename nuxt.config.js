@@ -48,6 +48,7 @@ export default {
       { name: "twitter:title", content: "NextBus SG" },
       { name: "twitter:description", content: "A bus timings and public transport app for Singapore, with extra features" },
       { name: "twitter:image:src", content: "/social-preview.png" },
+      { name: "twitter:site", content: "@themindstorm2" },
       { name: "twitter:card", content: "summary_large_image" },
 
       { property: "og:title", content: "NextBus SG" },
