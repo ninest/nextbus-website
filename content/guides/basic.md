@@ -4,7 +4,7 @@ description: Learn how to use the basic functionalities of the app NextBusSG
 excerpt: Learn how to use the basic functionalities of the app NextBusSG
 ---
 
-This article aims to walk you through the basics of NextBusSG – viewing bus arrival timings and adding bus preferred services to your favorites. If you haven't downloaded the app, click <nuxt-link to="/#download">here</nuxt-link>. I would strongly recommend you go through the tutorial that comes when you first launch the app.
+This article aims to walk you through the basics of NextBusSG – viewing bus arrival timings and adding bus preferred services to your favorites. If you haven't downloaded the app, click <nuxt-link to="/#download">here</nuxt-link>. It's strongly recommend that you go through the tutorial that comes when you first launch the app.
 
 ## 1. Viewing bus timings
 
@@ -42,7 +42,7 @@ Click on the <Clr color="accent">**Yes**</Clr> button to add it. It is possible 
 
 <ImgComp src="basic/favorites.png" />
 
-YOu can add all your frequently used bus services to your favorites.
+You can add all your frequently used bus services to your favorites.
 
 
 ### Location-aware favorites
