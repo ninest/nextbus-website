@@ -4,15 +4,15 @@ description: Learn how to use the basic functionalities of the app NextBusSG
 excerpt: Learn how to use the basic functionalities of the app NextBusSG
 ---
 
-This article aims to teach you the basics of NextBusSG (viewing bus arrival timings and adding bus services to your favorites). If you haven't downloaded the app, click <nuxt-link to="/#download">here</nuxt-link> to do so.
+This article aims to walk you through the basics of NextBusSG – viewing bus arrival timings and adding bus preferred services to your favorites. If you haven't downloaded the app, click <nuxt-link to="/#download">here</nuxt-link>. I would strongly recommend you go through the tutorial that comes when you first launch the app.
 
 ## 1. Viewing bus timings
 
-When you open the app, you will see a list of bus stops nearby. Clicking on any of them will reveal a list of bus services:
+When you open the app, you will see a list of bus stops nearby, based on your current location. Clicking on any of them will reveal a list of bus services:
 
-<ImgComp src="basic/stopsservices.png" />
+<ImgComp src="basic/bus-timings-demo.png" />
 
-As you can see, the bus stop **Bedok Stn Exit A** has the bus servies **2**, **9**, **24**, **25**, etc. operating. If, for example, you want to see when **bus 24** is arriving, look for **24** in the list of bus services:
+In the above screen, the bus stop **Bedok Stn Exit A** has the bus servies **2**, **9**, **24**, **25**, etc. operating. If, for example, you want to see when **bus 24** is arriving, look for **24** in the list of bus services:
 
 <ImgComp src="basic/service-tile.png" />
 
@@ -30,11 +30,11 @@ That's all you need! You may also see the level of crowded of the bus depending 
 
 So all three bus 24s have a regular load.
 
-## 2. Add favorites
+## 2. Adding favorites
 
-You can add a particular bus service at a bus stop to your favorites. Let's say you take **bus 14** at **Bedok Int** often, and you want to add it to your favorites:
+Let's say you take **bus 14** at **Bedok Int** often. You can add this to your favorites as follows.
 
-First, tap on the on the number **14**, and you should see a confirmation prompt:
+First, tap on the on the number **14**, and you'll see a popup to confirm adding the service to your favorites:
 
 <ImgComp src="basic/favorites-prompt.png" />
 
@@ -42,11 +42,14 @@ Click on the <Clr color="accent">**Yes**</Clr> button to add it. It is possible 
 
 <ImgComp src="basic/favorites.png" />
 
-Add buses you take often to your favorites.
+YOu can add all your frequently used bus services to your favorites.
 
 
-### Context-aware favorites
+### Location-aware favorites
 
-When you open the app the next time, if you have any favorites that are **near** you, they will be shown at the top of the screen. This decision is made by the app. 
+When you open the app the next time, if you have any favorites that are close to your current location, they will be shown at the top of the screen.
 
-If none of your favorites are near by, the app will show you a list of all near by bus stops.
+If none of your favorites are nearby, the app will show you a list of all near by bus stops.
+
+## 3. Discover other features!
+
