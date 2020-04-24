@@ -88,7 +88,7 @@ export default {
           box-shadow: inset 0 0 0 3px var(--accent-color);
           // , inset 0 0 0 10px white;
 
-          color: var(--action-color);
+          color: var(--accent-color);
         }
       }
 
