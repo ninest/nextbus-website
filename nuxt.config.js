@@ -44,11 +44,11 @@ export default {
         name: "description",
         content: siteConfig.desc
       },
-      { property: "theme-color", hid: "theme-color", content: "#000000" },
-      { property: "twitter:title", hid: "twitter:title", content: "NextBus SG" },
-      { property: "twitter:description", hid: "twitter:description", content: "A bus timings and public transport app for Singapore, with extra features" },
-      { property: "twitter:image:src", hid: "twitter:image", content: "/social-preview.png" },
-      { property: "twitter:card", hid: "twitter:card", content: "summary_large_image" },
+      { name: "theme-color", hid: "theme-color", content: "#000000" },
+      { name: "twitter:title", hid: "twitter:title", content: "NextBus SG" },
+      { name: "twitter:description", hid: "twitter:description", content: "A bus timings and public transport app for Singapore, with extra features" },
+      { name: "twitter:image:src", hid: "twitter:image", content: "/social-preview.png" },
+      { name: "twitter:card", hid: "twitter:card", content: "summary_large_image" },
 
       { property: "og:title", hid: "og:title", content: "NextBus SG" },
       { property: "og:description", hid: "og:description", content: "A bus timings and public transport app for Singapore, with extra features" },
