@@ -26,9 +26,9 @@ If it says "Arr", the bus has arrived.
 
 That's all you need! You may also see the level of crowded of the bus depending on the color of the timings:
 
-- <Clr color="green">Green</Clr> means no crowd
-- <Clr color="orange">Yellow</Clr> means little crowd
-- <Clr color="red">Red</Clr> means overcrowded
+- <Clr color="green">Green</Clr>: no crowd
+- <Clr color="orange">Yellow</Clr>: little crowd
+- <Clr color="red">Red</Clr>: overcrowded
 
 ## 2. Adding favorites
 
