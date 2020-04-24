@@ -53,3 +53,7 @@ If none of your favorites are nearby, the app will show you a list of all near b
 
 ## 3. Discover other features!
 
+Don't forget to check out:
+- **Dark theme**: choose a theme that pleases your eyes
+- **MRT map**: no need for another app just for an MRT map
+- **Custom names for favorites**
