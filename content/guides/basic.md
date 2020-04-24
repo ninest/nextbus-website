@@ -12,15 +12,15 @@ When you open the app, you will see a list of bus stops nearby, based on your cu
 
 <ImgComp src="basic/bus-timings-demo.png" :fullwidth="true" />
 
-In the above screen, the bus stop **Bedok Stn Exit A** has the bus servies **2**, **9**, **24**, **25**, etc. operating. If, for example, you want to see when **bus 24** is arriving, look for **24** in the list of bus services:
+In the above screen, the bus stop **Bedok Stn Exit A** has the bus servies **2**, **9**, **24**, **25**, etc. operating. If, for example, you want to see when **bus 9** is arriving, look for **9** in the list of bus services:
 
 <ImgComp src="basic/service-tile.png" />
 
 The number in black is the bus number (24), and the other three numbers are the bus arrival times. From the image we see the following bus arrival times:
 
-- Arr (the bus has arrived)
-- 12 minutes
-- 22 minutes
+- <Clr color="green">Arr</Clr> (the bus has arrived)
+- <Clr color="orange">21 m</Clr>inutes
+- <Clr color="red">29 m</Clr>inutes
 
 That's all you need! You may also see the level of crowded of the bus depending on the color of the timings:
 
