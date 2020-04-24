@@ -52,7 +52,7 @@ export default {
 
       { name: "og:title", hid: "og:title", content: "NextBus SG" },
       { name: "og:description", hid: "og:description", content: "A bus timings and public transport app for Singapore, with extra features" },
-      { name: "og:image", hid: "og:image", content: "/social-preview.png" },
+      { name: "og:image", hid: "og:image", content: "/wa-preview.png" },
       { name: "og:url", hid: "og:url", content: "https://nextbus.now.sh/" },
     ],
     link: [
