@@ -45,15 +45,15 @@ export default {
         content: siteConfig.desc
       },
       { name: "theme-color", hid: "theme-color", content: "#000000" },
-      { name: "twitter:title", hid: "twitter:title", content: "NextBus SG" },
-      { name: "twitter:description", hid: "twitter:description", content: "A bus timings and public transport app for Singapore, with extra features" },
-      { name: "twitter:image:src", hid: "twitter:image", content: "/social-preview.png" },
-      { name: "twitter:card", hid: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "NextBus SG" },
+      { name: "twitter:description", content: "A bus timings and public transport app for Singapore, with extra features" },
+      { name: "twitter:image:src", content: "/social-preview.png" },
+      { name: "twitter:card", content: "summary_large_image" },
 
-      { property: "og:title", hid: "og:title", content: "NextBus SG" },
-      { property: "og:description", hid: "og:description", content: "A bus timings and public transport app for Singapore, with extra features" },
-      { property: "og:image", hid: "og:image", content: "/wa-preview.png" },
-      { property: "og:url", hid: "og:url", content: "https://nextbus.now.sh/" },
+      { property: "og:title", content: "NextBus SG" },
+      { property: "og:description", content: "A bus timings and public transport app for Singapore, with extra features" },
+      { property: "og:image", content: "/wa-preview.png" },
+      { property: "og:url", content: "https://nextbus.now.sh/" },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.png" },

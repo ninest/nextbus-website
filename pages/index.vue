@@ -26,7 +26,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: `${this.siteConfig} – The all new open-source app for Singapore. See bus timings fast with little interaction in an interface you will love`
+          content: `NextBus SG - The all new open-source app for Singapore. See bus timings fast with little interaction in an interface you will love`
         }
       ]
     }
