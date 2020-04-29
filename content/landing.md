@@ -42,6 +42,6 @@ download:
     image: badges/google_play.png
     url: https://play.google.com/store/apps/details?id=com.themindstorm.nextbussg
   ios:
-    image: badges/testflight.png
-    url: https://testflight.apple.com/join/nMWtVks4
+    image: badges/appstore.png
+    url: https://apps.apple.com/my/app/nextbus-sg/id1509167028
 ---
